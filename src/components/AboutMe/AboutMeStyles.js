@@ -2,41 +2,28 @@ import styled from "styled-components";
 
 export const AboutMeStyles = styled.div`
   &.about-me__container {
-    display: grid;
-    grid-template-areas: "about-me-container-one about-me-container-two";
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://imageio.forbes.com/blogs-images/laurencebradford/files/2017/02/communication-1200x794.jpeg?format=jpg&width=1200);
     height: 100vh;
-    width: 100vw;
-  }
-  .about-me__container-one {
-    grid-area: about-me-container-one;
-    background-color: var(--pink);
-  }
-  .about-me__container-two {
-    grid-area: about-me-container-two;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .about-me {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: grid;
-    grid-template-areas: "about-me--one about-me--two";
     height: 528px;
+    display: flex;
   }
-
   @media (max-width: 768px) {
     &.about-me__container {
-      display: block;
-      width: auto;
       height: auto;
     }
-    .about-me__container-one {
-      height: 112px;
-      background: var(--white);
-    }
-    .about-me__container-two {
-      background-color: var(--pink);
+    .about-me {
+      flex-direction: column;
+      width: 320px;
+      height: auto;
     }
   }
 `;
@@ -45,16 +32,16 @@ export const AboutMeOneStyles = styled.div`
   &.about-me-one {
     width: 375px;
     height: inherit;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: grid;
     grid-template-rows: 1fr 53px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   .about-me-one__about-me {
-    background-color: var(--pink-two);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    background-color: var(--dark-pink);
   }
   .about-me-one__about-me__photo {
     width: 205px;
@@ -79,30 +66,29 @@ export const AboutMeOneStyles = styled.div`
     justify-content: space-evenly;
     align-items: center;
   }
-  .about-me-one__social-media__svg {
-    height: 40px;
-    width: 40px;
-  }
   @media (max-width: 768px) {
     &.about-me-one {
-      width: 320px;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, 0);
+      flex-direction: column;
+      width: inherit;
+      height: auto;
+    }
+    .about-me-one__about-me {
+      padding: 32px;
+      box-sizing: border-box;
     }
   }
 `;
 
 export const AboutMeTwoStyles = styled.div`
   &.about-me-two {
-    padding: 32px;
-    box-sizing: border-box;
     width: 400px;
     height: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 32px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.4);
   }
   .about-me-two__title {
     font-size: 48px;
@@ -145,12 +131,12 @@ export const AboutMeTwoStyles = styled.div`
   }
   @media (max-width: 768px) {
     &.about-me-two {
-      width: auto;
+      width: inherit;
+      height: auto;
     }
     .about-me-two__title {
       font-size: 40px;
-      margin-top: 312px;
-      margin-bottom: 16px;
+      margin: 16px 0;
     }
     .about-me-two__cv {
       margin: 8px 0;
