@@ -1,8 +1,9 @@
 import { AppStyles } from "./AppStyles";
 import photo from "./images/photo.JPG";
+import GitHub from "./svg/GitHub";
+import LinkedIn from "./svg/LinkedIn";
 
 //TODO
-// redes sociales
 // cv
 // responsive
 
@@ -23,7 +24,24 @@ function App() {
             <hr className="about-me__about-me__hr" />
             <p className="about-me__about-me__role">FRONTEND DEVELOPER</p>
           </div>
-          <div className="about-me--one__social-media">Redes sociales</div>
+          <div className="about-me--one__social-media">
+            <a
+              href="https://www.linkedin.com/in/gabrielasuarezcarvajal/"
+              className="about-me--one__social-media__svg"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedIn />
+            </a>
+            <a
+              href="https://github.com/gabi04"
+              className="about-me--one__social-media__svg"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitHub />
+            </a>
+          </div>
         </div>
         <div className="about-me--two">
           <h1 className="about-me--two__title">Hola</h1>

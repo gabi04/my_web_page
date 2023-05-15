@@ -37,6 +37,13 @@ export const AppStyles = styled.div`
   }
   .about-me--one__social-media {
     background-color: var(--white);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .about-me--one__social-media__svg {
+    height: 40px;
+    width: 40px;
   }
   .about-me--one__about-me__photo {
     width: 205px;
