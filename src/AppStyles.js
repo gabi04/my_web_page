@@ -7,7 +7,7 @@ export const AppStyles = styled.div`
   height: 100vh;
   .about-me__bg--one {
     grid-area: about-me-bg--one;
-    background-color: #e6dace;
+    background-color: var(--pink);
   }
   .about-me__bg--two {
     grid-area: about-me-bg--two;
@@ -19,35 +19,56 @@ export const AppStyles = styled.div`
     transform: translate(-50%, -50%);
     display: grid;
     grid-template-areas: "about-me--one about-me--two";
+    height: 528px;
   }
   .about-me--one {
-    background-color: #f4ece6;
     width: 375px;
-    height: 529px;
+    height: inherit;
+    display: grid;
+    grid-template-rows: 1fr 53px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .about-me--one__about-me {
+    background-color: var(--pink-two);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
-
-  .about-me--one__photo {
+  .about-me--one__social-media {
+    background-color: var(--white);
+  }
+  .about-me--one__about-me__photo {
     width: 205px;
     height: 205px;
     border-radius: 100%;
   }
-
-  .about-me__hr {
+  .about-me__about-me__hr {
     width: 50px;
-    background-color: #3078fe;
-    border: 1px solid #3078fe;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
     margin-bottom: 25px;
   }
-
-  .about-me__role {
+  .about-me__about-me__role {
     letter-spacing: 0.25em;
     font-size: 17px;
-    color: rgb(100, 102, 101);
+    color: var(--grey);
     font-family: sans-serif;
+  }
+  .about-me--two {
+    padding: 32px;
+    box-sizing: border-box;
+    width: 400px;
+    height: inherit;
+  }
+  .about-me--two__title {
+    font-size: 100px;
+    margin: 48px 0;
+  }
+  .about-me--two__paragraph {
+    line-height: 1.5em;
+    font-size: 17px;
+    text-align: justify;
+    color: var(--grey);
   }
 `;
