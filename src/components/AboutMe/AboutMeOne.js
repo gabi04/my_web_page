@@ -18,19 +18,13 @@ const AboutMeOne = () => (
     <div className="about-me-one__social-media">
       <a
         href="https://www.linkedin.com/in/gabrielasuarezcarvajal/"
-        className="about-me-one__social-media__svg"
         target="_blank"
         rel="noreferrer"
       >
-        <LinkedIn />
+        <LinkedIn size={40} />
       </a>
-      <a
-        href="https://github.com/gabi04"
-        className="about-me-one__social-media__svg"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <GitHub />
+      <a href="https://github.com/gabi04" target="_blank" rel="noreferrer">
+        <GitHub size={40} />
       </a>
     </div>
   </AboutMeOneStyles>

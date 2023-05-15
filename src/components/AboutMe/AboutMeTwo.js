@@ -4,7 +4,7 @@ import HV from "../../sources/pdfs/HV.pdf";
 
 const AboutMeTwo = () => (
   <AboutMeTwoStyles className="about-me-two">
-    <h1 className="about-me-two__title">Hola</h1>
+    <h1 className="about-me-two__title">I code cool websites</h1>
     <div>
       <a
         href={HV}
@@ -26,8 +26,8 @@ const AboutMeTwo = () => (
       Ingeniería de Sistemas y Computación y 3 años de amplia experiencia en el
       mundo de la tecnología. Desde entonces he trabajado para start ups de last
       mile como Instaleap y Quick. He aprendido la importancia de moverse rápido
-      y de manera sostenible para mantenerse entregar valor mientras creo código
-      de calidad.
+      y de manera sostenible para mantenerse en el negocio y entregar valor
+      mientras creo código de calidad.
     </p>
   </AboutMeTwoStyles>
 );

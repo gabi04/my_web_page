@@ -1,16 +1,19 @@
 import styled from "styled-components";
 
 export const AboutMeStyles = styled.div`
-  display: grid;
-  grid-template-areas: "about-me-bg--one about-me-bg--two";
-  grid-template-columns: 1fr 2fr;
-  height: 100vh;
-  .about-me__bg--one {
-    grid-area: about-me-bg--one;
+  &.about-me__container {
+    display: grid;
+    grid-template-areas: "about-me-container-one about-me-container-two";
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+    width: 100vw;
+  }
+  .about-me__container-one {
+    grid-area: about-me-container-one;
     background-color: var(--pink);
   }
-  .about-me__bg--two {
-    grid-area: about-me-bg--two;
+  .about-me__container-two {
+    grid-area: about-me-container-two;
   }
   .about-me {
     position: absolute;
@@ -21,15 +24,30 @@ export const AboutMeStyles = styled.div`
     grid-template-areas: "about-me--one about-me--two";
     height: 528px;
   }
+
+  @media (max-width: 768px) {
+    &.about-me__container {
+      display: block;
+      width: auto;
+      height: auto;
+    }
+    .about-me__container-one {
+      height: 112px;
+      background: var(--white);
+    }
+    .about-me__container-two {
+      background-color: var(--pink);
+    }
+  }
 `;
 
 export const AboutMeOneStyles = styled.div`
   &.about-me-one {
     width: 375px;
     height: inherit;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: grid;
     grid-template-rows: 1fr 53px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   .about-me-one__about-me {
     background-color: var(--pink-two);
@@ -65,6 +83,15 @@ export const AboutMeOneStyles = styled.div`
     height: 40px;
     width: 40px;
   }
+  @media (max-width: 768px) {
+    &.about-me-one {
+      width: 320px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
 `;
 
 export const AboutMeTwoStyles = styled.div`
@@ -78,7 +105,7 @@ export const AboutMeTwoStyles = styled.div`
     justify-content: space-between;
   }
   .about-me-two__title {
-    font-size: 80px;
+    font-size: 48px;
     margin: 0;
   }
   .about-me-two__cv {
@@ -101,7 +128,7 @@ export const AboutMeTwoStyles = styled.div`
   }
   .about-me-two__cv--english {
     border: 1px solid var(--black);
-    background-color: var(--white);
+    background-color: transparent;
     color: var(--black);
   }
   .about-me-two__cv--english:hover {
@@ -115,5 +142,21 @@ export const AboutMeTwoStyles = styled.div`
     text-align: justify;
     color: var(--grey);
     margin: 0;
+  }
+  @media (max-width: 768px) {
+    &.about-me-two {
+      width: auto;
+    }
+    .about-me-two__title {
+      font-size: 40px;
+      margin-top: 312px;
+      margin-bottom: 16px;
+    }
+    .about-me-two__cv {
+      margin: 8px 0;
+    }
+    .about-me-two__paragraph {
+      margin-top: 16px;
+    }
   }
 `;
