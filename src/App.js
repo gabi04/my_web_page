@@ -1,80 +1,11 @@
-import { AppStyles } from "./AppStyles";
-import photo from "./sources/images/photo.JPG";
-import CV from "./sources/pdfs/CV.pdf";
-import HV from "./sources/pdfs/HV.pdf";
-import GitHub from "./svg/GitHub";
-import LinkedIn from "./svg/LinkedIn";
+import AboutMe from "./components/AboutMe";
 
 //TODO
 // order
 // responsive
 
 function App() {
-  return (
-    <AppStyles>
-      <div className="about-me__bg--one" />
-      <div className="about-me__bg--two" />
-      <div className="about-me">
-        <div className="about-me--one">
-          <div className="about-me--one__about-me">
-            <img
-              className="about-me--one__about-me__photo"
-              src={photo}
-              alt="about-me"
-            />
-            <h1>Gabriela Suárez</h1>
-            <hr className="about-me__about-me__hr" />
-            <p className="about-me__about-me__role">FRONTEND DEVELOPER</p>
-          </div>
-          <div className="about-me--one__social-media">
-            <a
-              href="https://www.linkedin.com/in/gabrielasuarezcarvajal/"
-              className="about-me--one__social-media__svg"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <LinkedIn />
-            </a>
-            <a
-              href="https://github.com/gabi04"
-              className="about-me--one__social-media__svg"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <GitHub />
-            </a>
-          </div>
-        </div>
-        <div className="about-me--two">
-          <h1 className="about-me--two__title">Hola</h1>
-          <div>
-            <a
-              href={HV}
-              download="Gabriela Suarez CV"
-              className="about-me--two__cv--spanish"
-            >
-              Currículum en español
-            </a>
-            <a
-              href={CV}
-              download="Gabriela Suarez CV en ingles"
-              className="about-me--two__cv--english"
-            >
-              Currículum en inglés
-            </a>
-          </div>
-          <p className="about-me--two__paragraph">
-            Soy una ingeniera con una fuerte ética de trabajo con un título en
-            Ingeniería de Sistemas y Computación y 3 años de amplia experiencia
-            en el mundo de la tecnología. Desde entonces he trabajado para start
-            ups de last mile como Instaleap y Quick. He aprendido la importancia
-            de moverse rápido y de manera sostenible para mantenerse entregar
-            valor mientras creo código de calidad.
-          </p>
-        </div>
-      </div>
-    </AppStyles>
-  );
+  return <AboutMe />;
 }
 
 export default App;
