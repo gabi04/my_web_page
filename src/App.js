@@ -1,10 +1,12 @@
 import { AppStyles } from "./AppStyles";
-import photo from "./images/photo.JPG";
+import photo from "./sources/images/photo.JPG";
+import CV from "./sources/pdfs/CV.pdf";
+import HV from "./sources/pdfs/HV.pdf";
 import GitHub from "./svg/GitHub";
 import LinkedIn from "./svg/LinkedIn";
 
 //TODO
-// cv
+// order
 // responsive
 
 function App() {
@@ -45,6 +47,22 @@ function App() {
         </div>
         <div className="about-me--two">
           <h1 className="about-me--two__title">Hola</h1>
+          <div>
+            <a
+              href={HV}
+              download="Gabriela Suarez CV"
+              className="about-me--two__cv--spanish"
+            >
+              Currículum en español
+            </a>
+            <a
+              href={CV}
+              download="Gabriela Suarez CV en ingles"
+              className="about-me--two__cv--english"
+            >
+              Currículum en inglés
+            </a>
+          </div>
           <p className="about-me--two__paragraph">
             Soy una ingeniera con una fuerte ética de trabajo con un título en
             Ingeniería de Sistemas y Computación y 3 años de amplia experiencia

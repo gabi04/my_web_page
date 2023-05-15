@@ -67,15 +67,52 @@ export const AppStyles = styled.div`
     box-sizing: border-box;
     width: 400px;
     height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .about-me--two__title {
-    font-size: 100px;
-    margin: 48px 0;
+    font-size: 80px;
+    margin: 0;
+  }
+  .about-me--two__cv--spanish {
+    border: 1px solid var(--blue);
+    background-color: var(--blue);
+    padding: 4px 8px;
+    color: var(--white);
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    width: fit-content;
+    margin: 4px 0;
+  }
+  .about-me--two__cv-spanish:hover {
+    background-color: var(--white);
+    color: var(--black);
+  }
+  .about-me--two__cv--english {
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    padding: 4px 8px;
+    color: var(--black);
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    width: fit-content;
+    margin: 4px 0;
+  }
+  .about-me--two__cv--english:hover {
+    background-color: var(--blue);
+    border-color: blue;
+    color: var(--white);
   }
   .about-me--two__paragraph {
     line-height: 1.5em;
     font-size: 17px;
     text-align: justify;
     color: var(--grey);
+    margin: 0;
   }
 `;
