@@ -15,13 +15,13 @@ const Skills = () => (
         <ReactSvg size={240} />
       </Skill>
       <Skill experienceTime="4 años">
-        <JavaScriptSvg size={240} />
+        <JavaScriptSvg size={160} />
       </Skill>
       <Skill experienceTime="4 años">
-        <HtmlSvg size={240} />
+        <HtmlSvg size={160} />
       </Skill>
       <Skill experienceTime="4 años">
-        <CssSvg size={240} />
+        <CssSvg size={160} />
       </Skill>
       <Skill experienceTime="6 meses">
         <TypeScriptSvg size={160} />

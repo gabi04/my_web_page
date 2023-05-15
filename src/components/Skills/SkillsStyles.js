@@ -25,10 +25,13 @@ export const SkillsStyles = styled.div`
   .skills_technology {
     width: 240px;
     height: 360px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 1fr 70px;
     margin: 16px;
+  }
+  .skills_technology__svg {
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
   .skills_technology__years {
@@ -47,6 +50,9 @@ export const SkillsStyles = styled.div`
     .skills_grid {
       width: 100%;
       justify-content: space-between;
+    }
+    .skills_technology__years {
+      font-size: 32px;
     }
   }
 `;
